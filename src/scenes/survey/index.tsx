@@ -13,14 +13,17 @@ import Weather from './components/Weather';
 const Container = styled.div`
     width: 80%;
     margin: 50px auto;
-    padding: 10px 25px;
-    box-shadow: 0 0 2px ${Colors.GREY};
+    padding: 0;
+    box-shadow: 0 0 4px ${Colors.GREY};
+`;
+
+const SurveyStyled = styled.div`
+    padding: 35px;
 `;
 
 const Title = styled.h1`
     font-size: 28px;
     font-weight: bold;
-
 `;
 
 const Desc = styled.p`
@@ -90,6 +93,7 @@ const Survey = () => {
     return (
         <Container>
             <Weather />
+            <SurveyStyled>
             <Title>{title}</Title>
             <Desc>{desc}</Desc>
             <Form form={form} {...layout} initialValues={{ data: [{ options: ['',''] }] }} labelAlign="left" onFinish={handleSubmitForm} name="surveyForm">
@@ -159,6 +163,7 @@ const Survey = () => {
                     <Button type="primary" htmlType="submit">Submit</Button>
                 </Form.Item>
             </Form>
+            </SurveyStyled>
         </Container>
     )
 }

@@ -6,10 +6,14 @@ import Title from 'antd/lib/typography/Title';
 import { WeatherTypes } from '../interface';
 import styled from 'styled-components';
 import Paragraph from 'antd/lib/typography/Paragraph';
+import Colors from '../../../components/Colors';
 
 const WeatherWrap = styled.div`
     display: flex;
     align-items: center;
+    border-bottom: 1px solid ${Colors.GREY};
+    background: #fff;
+    box-shadow: 0 4px 10px -5px ${Colors.GREY};
 `;
 
 const WeatherDetail = styled.div`
