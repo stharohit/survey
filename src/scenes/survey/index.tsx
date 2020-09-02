@@ -8,6 +8,7 @@ import { PlusOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Objective } from './components/Objective';
 import { SelectValue } from 'antd/lib/select';
 import { FormListFieldData } from 'antd/lib/form/FormList';
+import Weather from './components/Weather';
 
 const Container = styled.div`
     width: 80%;
@@ -88,6 +89,7 @@ const Survey = () => {
 
     return (
         <Container>
+            <Weather />
             <Title>{title}</Title>
             <Desc>{desc}</Desc>
             <Form form={form} {...layout} initialValues={{ data: [{ options: ['',''] }] }} labelAlign="left" onFinish={handleSubmitForm} name="surveyForm">
